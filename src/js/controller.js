@@ -213,7 +213,10 @@ class Controller {
             const url = this.player.audio.src;
             const reg = /(?:.*\/)*(.*)/;
             const filename = reg.exec(url);
+            const spinner = this.player.template.spinner.style;
+            spinner.display = 'inline-block';
             saveAs(url, filename[1]);
+            setTimeout(() => {spinner.display = 'none';}, 8E3);
         });
     }
 }

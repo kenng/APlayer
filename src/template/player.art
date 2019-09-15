@@ -7,7 +7,8 @@
         <div class="aplayer-music">
             <span class="aplayer-title">No audio</span>
             <span class="aplayer-author"></span>
-            <span class="aplayer-download"> (Download)</span>
+            <span class="aplayer-download"> (Download) </span>
+            <div id="loading"></div>
         </div>
         <div class="aplayer-lrc">
             <div class="aplayer-lrc-contents" style="transform: translateY(0); -webkit-transform: translateY(0);"></div>

@@ -58,6 +58,7 @@ class Template {
         this.skipPlayButton = this.container.querySelector('.aplayer-icon-play');
         this.lrcButton = this.container.querySelector('.aplayer-icon-lrc');
         this.downloadButton = this.container.querySelector('.aplayer-download');
+        this.spinner = this.container.querySelector('#loading');
     }
 }
 
