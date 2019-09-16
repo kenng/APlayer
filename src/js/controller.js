@@ -209,15 +209,18 @@ class Controller {
             return;
         }
 
-        this.player.template.downloadButton.addEventListener('click', () => {
-            const url = this.player.audio.src;
-            const reg = /(?:.*\/)*(.*)/;
-            const filename = reg.exec(url);
-            const spinner = this.player.template.spinner.style;
-            spinner.display = 'inline-block';
-            saveAs(url, filename[1]);
-            setTimeout(() => {spinner.display = 'none';}, 8E3);
-        });
+        for (const btn of this.player.template.downloadButton) {
+
+            btn.addEventListener('click', () => {
+                const url = this.player.audio.src;
+                const reg = /(?:.*\/)*(.*)/;
+                const filename = reg.exec(url);
+                const spinner = this.player.template.spinner.style;
+                spinner.display = 'inline-block';
+                saveAs(url, filename[1]);
+                setTimeout(() => {spinner.display = 'none';}, 8E3);
+            });
+        }
     }
 }
 
